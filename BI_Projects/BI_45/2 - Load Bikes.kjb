@@ -7,7 +7,7 @@
   <created_user>-</created_user>
   <created_date>2021/12/10 14:26:33.412</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2021/12/10 15:22:01.049</modified_date>
+  <modified_date>2021/12/10 16:08:24.389</modified_date>
   <parameters>
     </parameters>
   <connection>
@@ -777,15 +777,6 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>ShipMethod</from>
-      <to>SalesOrderHeader</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>N</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
       <from>SalesOrderHeader</from>
       <to>SalesOrderDetail</to>
       <from_nr>0</from_nr>
@@ -796,12 +787,30 @@
     </hop>
     <hop>
       <from>Start</from>
-      <to>SalesOrderHeader</to>
+      <to>Country</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>ShipMethod</from>
+      <to>SalesOrderHeader</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>ProductSubCategory</from>
+      <to>Product</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
     </hop>
   </hops>
   <notepads>
