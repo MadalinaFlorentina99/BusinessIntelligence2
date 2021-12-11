@@ -1,0 +1,4 @@
+SELECT [OrderLineTotal] ON COLUMNS,
+ORDER([ShippedToLocationKey].[Country].MEMBERS, [OrderLineTotal], DESC) ON ROWS
+FROM database_name
+WHERE [OrderDate].[Year].[2019]
