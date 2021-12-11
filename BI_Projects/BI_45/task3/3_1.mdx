@@ -1,4 +1,4 @@
 SELECT [OrderLineProfit] ON COLUMNS, 
 ORDER([DIM_Product].[ProductTopCategoryName].MEMBERS, [OrderLineProfit], DESC) ON ROWS 
-FROM Database_name
+FROM bike_sales
 WHERE [OrderDate].[Year].[2021]

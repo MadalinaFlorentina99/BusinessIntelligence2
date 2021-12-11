@@ -1,0 +1,5 @@
+﻿Bonus question:
+
+The way the dependencies between the tables are built is one of the schema's major flaws. We can argue that in the instance of the 'TB SalesOrderDetail' the 'TB SalesOrderHeader' is required first.To be able to write all the dependencies in that table, we will need to first build the 'TB_ShipMethod' (we will assume that we utilized the order supplied to us), to sum it up, I consider the model seems to be suboptimal due to the number of dependencies given.
+
+Also, we can argue that the amount of information is redundant. For example, in the case of the 'TB SalesOrderDetail' and 'TB SalesOrderHeader,' we have two primary keys that should be the same given their description ("Primary key for Sales Order Details records"), and based on that description, we can confidently use the 'TB SalesOrderHeader' primary key as a foreign key in the 'TB SalesOrderDetail.'

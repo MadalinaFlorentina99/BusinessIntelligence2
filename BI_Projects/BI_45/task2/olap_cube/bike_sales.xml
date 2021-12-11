@@ -1,5 +1,5 @@
 <Schema name="bike_sales">
-  <Dimension type="TimeDimension" visible="true" foreignKey="DateKey" highCardinality="false" name="Date">
+  <Dimension type="TimeDimension" visible="true" highCardinality="false" name="Date">
     <Hierarchy name="Days" visible="true" hasAll="true" primaryKey="DateKey">
       <Table name="DIM_DATE">
       </Table>
@@ -11,7 +11,7 @@
       </Level>
     </Hierarchy>
   </Dimension>
-  <Dimension type="StandardDimension" visible="true" foreignKey="LocationKey" highCardinality="false" name="Location">
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Location">
     <Hierarchy name="Territory" visible="true" hasAll="true" primaryKey="LocationKey">
       <Table name="DIM_Location">
       </Table>
@@ -21,7 +21,7 @@
       </Level>
     </Hierarchy>
   </Dimension>
-  <Dimension type="StandardDimension" visible="true" foreignKey="ProductKey" highCardinality="false" name="Product">
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Product">
     <Hierarchy name="ProductCategory" visible="true" hasAll="true" primaryKey="ProductKey">
       <Table name="DIM_Product">
       </Table>
@@ -31,7 +31,7 @@
       </Level>
     </Hierarchy>
   </Dimension>
-  <Dimension type="StandardDimension" visible="true" foreignKey="CustomerKey" highCardinality="false" name="Customer">
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Customer">
     <Hierarchy name="Age" visible="true" hasAll="true" primaryKey="CustomerKey">
       <Table name="DIM_CUSTOMER">
       </Table>
@@ -45,22 +45,22 @@
       </Level>
     </Hierarchy>
     <Hierarchy name="FullName" visible="true" hasAll="true" primaryKey="CustomerKey">
-      <Table name="DIM_CUSTOMER" alias="">
+      <Table name="DIM_CUSTOMER">
       </Table>
-      <Level name="FullName" visible="true" table="DIM_CUSTOMER" column="FullName" uniqueMembers="false">
+      <Level name="FullName" visible="true" table="DIM_CUSTOMER" column="FullName" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
       </Level>
     </Hierarchy>
   </Dimension>
   <Cube name="bike_sales" caption="test" visible="true" cache="true" enabled="true">
     <Table name="Fact_InternetSales">
     </Table>
-    <DimensionUsage source="Customer" name="Customer" visible="true" foreignKey="CustomerKey">
+    <DimensionUsage source="Customer" name="Customer" visible="true" foreignKey="CustomerKey" highCardinality="false">
     </DimensionUsage>
-    <DimensionUsage source="Product" name="Product" visible="true" foreignKey="ProductKey">
+    <DimensionUsage source="Product" name="Product" visible="true" foreignKey="ProductKey" highCardinality="false">
     </DimensionUsage>
-    <DimensionUsage source="Location" name="ShippedTo" visible="true" foreignKey="ShipToLocationKey">
+    <DimensionUsage source="Location" name="ShippedTo" visible="true" foreignKey="ShipToLocationKey" highCardinality="false">
     </DimensionUsage>
-    <DimensionUsage source="Date" name="OrderDate" visible="true" foreignKey="OrderDateKey">
+    <DimensionUsage source="Date" name="OrderDate" visible="true" foreignKey="OrderDateKey" highCardinality="false">
     </DimensionUsage>
     <Measure name="Revenue" column="OrderLineTotal" formatString="Currency" aggregator="distinct-count" visible="true">
     </Measure>

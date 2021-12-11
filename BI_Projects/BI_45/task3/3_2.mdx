@@ -1,4 +1,4 @@
 SELECT [OrderLineTotal] ON COLUMNS,
 ORDER([ShippedToLocationKey].[Country].MEMBERS, [OrderLineTotal], DESC) ON ROWS
-FROM database_name
+FROM bike_sales
 WHERE [OrderDate].[Year].[2019]

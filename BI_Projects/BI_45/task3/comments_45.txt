@@ -1,0 +1,3 @@
+Comments on the query-results: 
+
+We managed to populate all tables accept of the Fact_InternetSales. Therefore the table is empty and we could not test the queries in 3. Business Analytics correctly. Although we created the queries of the 3. part and they are working.

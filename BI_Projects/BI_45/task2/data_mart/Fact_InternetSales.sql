@@ -17,7 +17,7 @@ UnitPrice decimal(13,4),
 OrderLineTotal DECIMAL(13,4),
 OrderLineProfit DECIMAL(13,4),
 OrderLineTaxAmt DECIMAL(13,4),
-OrderLineShoppingCost DECIMAL(13,4));
+OrderLineShippingCost DECIMAL(13,4));
 
 Alter Table Fact_InternetSales
 add constraint PK_Fact_InternetSales
