@@ -1,6 +1,6 @@
 Create table DIM_DATE(
 DateKey int not null,
-FullDateAlternativeKey date,
+FullDateAlternateKey date,
 DayNumberOfWeek int,
 EnglishNameDayOfTheWeek varchar(30),
 DayNumberOfMonth int,

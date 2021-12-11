@@ -1,3 +1,0 @@
-USE BI_BikesDW_45;
-INSERT INTO DIM_CUSTOMER (CustomerKey)
-VALUES (1);
